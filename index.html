@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#1A1A1A" />
+  <title>Aldermere — Luxury Home Remodeling &amp; Custom Renovations</title>
+  <meta name="description" content="Aldermere transforms houses into extraordinary homes. Luxury remodeling, renovations, and custom home transformations designed around exceptional craftsmanship." />
+  <link rel="stylesheet" href="fonts/fonts.css" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/pages.css" />
+  <link rel="icon" href="icons/favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="icons/favicon.svg" />
+  <link rel="manifest" href="site.webmanifest" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="/images/og-image.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="canonical" href="https://www.aldermere.com/" />
+</head>
+<body data-page="home">
+
+  <!-- ===================== LOADER ===================== -->
+  <div class="loader" id="loader" aria-hidden="true">
+    <div class="loader__inner">
+      <span class="loader__mark">ALDERMERE</span>
+      <span class="loader__line"><span class="loader__fill" id="loaderFill"></span></span>
+    </div>
+  </div>
+
+  <!-- ===================== NAVBAR (injected by site.js) ===================== -->
+  <header id="site-header"></header>
+
+  <!-- Architectural scroll marker — brass measuring/compass marker, shown only over light sections -->
+  <div class="scroll-marker" id="scrollMarker" aria-hidden="true">
+    <svg viewBox="0 0 30 90" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <line x1="15" y1="3" x2="15" y2="87" stroke="currentColor" stroke-width="1" stroke-opacity=".4" />
+      <line x1="9" y1="33" x2="21" y2="33" stroke="currentColor" stroke-width="1" stroke-opacity=".4" />
+      <line x1="9" y1="57" x2="21" y2="57" stroke="currentColor" stroke-width="1" stroke-opacity=".4" />
+      <circle cx="15" cy="45" r="8.5" stroke="currentColor" stroke-width="1" stroke-opacity=".55" />
+      <path d="M15 39 L21 45 L15 51 L9 45 Z" fill="currentColor" />
+      <circle cx="15" cy="45" r="1.5" fill="#FAF9F7" />
+    </svg>
+  </div>
+
+  <main id="top">
+
+    <!-- ===================== HERO ===================== -->
+    <section class="hero" id="hero">
+        <div class="hero__viewport">
+          <!-- Scroll-scrubbed cinematic video (currentTime is driven by scroll, never autoplay) -->
+          <div class="hero__scene" id="heroScene">
+            <video
+              class="hero__video"
+              id="heroVideo"
+              muted playsinline preload="auto"
+              poster="/images/us-1600585154340-be6161a56a0c.jpg"
+            >
+              <!-- Dense-keyframe re-encode (ffmpeg -g 6) for smooth scroll seeking -->
+              <source src="videos/herosection1-scrub.mp4" type="video/mp4" />
+            </video>
+            <div class="hero__scrim"></div>
+          </div>
+
+          <div class="hero__content" id="heroContent">
+            <span class="eyebrow eyebrow--light">Luxury Home Remodeling Since 1998</span>
+            <h1 class="hero__title">
+              Transforming Houses Into<br /><em>Extraordinary</em> Homes
+            </h1>
+            <p class="hero__sub">
+              Luxury remodeling, renovations, and custom home transformations
+              designed around exceptional craftsmanship.
+            </p>
+            <div class="hero__actions">
+              <a href="contact.html" class="btn btn--solid btn--lg">Get Free Consultation</a>
+              <a href="portfolio.html" class="btn btn--ghost btn--lg">View Projects</a>
+            </div>
+          </div>
+
+          <!-- Permanent conversion CTA — sits over the lower-right of the video at all sizes -->
+          <aside class="hero-cta" aria-label="Free design consultation">
+            <div class="hero-cta__info">
+              <span class="hero-cta__badge">Licensed &amp; Insured</span>
+              <span class="hero-cta__stars" aria-label="5 out of 5 stars">★★★★★</span>
+              <strong class="hero-cta__count">500+ Happy Homeowners</strong>
+              <span class="hero-cta__line">Free Design Consultation</span>
+            </div>
+            <a href="contact.html" class="hero-cta__btn">Get Estimate <span aria-hidden="true">→</span></a>
+          </aside>
+
+          <div class="hero__scrollcue" aria-hidden="true">
+            <span>Scroll</span>
+            <span class="hero__scrollcue-line"></span>
+          </div>
+        </div>
+    </section>
+
+    <!-- ===================== TRUST BAR ===================== -->
+    <section class="trust" aria-label="Why homeowners trust us">
+      <div class="container trust__grid">
+        <div class="trust__item reveal"><span class="trust__num">500+</span><span class="trust__label">Projects Completed</span></div>
+        <div class="trust__item reveal"><span class="trust__num">5.0</span><span class="trust__label">Average Star Rating</span></div>
+        <div class="trust__item reveal"><span class="trust__num">Licensed</span><span class="trust__label">&amp; Fully Insured</span></div>
+        <div class="trust__item reveal"><span class="trust__num">Financing</span><span class="trust__label">Available</span></div>
+      </div>
+    </section>
+
+    <!-- ===================== SERVICES ===================== -->
+    <section class="section services" id="services">
+      <div class="container">
+        <header class="section__head">
+          <span class="eyebrow reveal">What We Craft</span>
+          <h2 class="section__title reveal">A complete portfolio of<br />residential transformation.</h2>
+          <p class="section__lede reveal">
+            From a single signature room to a full architectural reimagining, every
+            engagement is led by a dedicated team and built to last generations.
+          </p>
+        </header>
+
+        <div class="services__grid">
+          <article class="service-card reveal" style="--img:url('../public/home%20page/kitchen.png')">
+            <a class="card-link" href="kitchen-remodeling.html" aria-label="Kitchen Remodeling"></a>
+            <div class="service-card__media"></div>
+            <div class="service-card__body">
+              <span class="service-card__index">01</span>
+              <h3>Kitchen Remodeling</h3>
+              <p>Bespoke cabinetry, stone surfaces, and chef-grade layouts engineered around how you live.</p>
+              <span class="service-card__more">Explore →</span>
+            </div>
+          </article>
+
+          <article class="service-card reveal" style="--img:url('../public/home%20page/bathroom.png')">
+            <a class="card-link" href="bathroom-remodeling.html" aria-label="Bathroom Remodeling"></a>
+            <div class="service-card__media"></div>
+            <div class="service-card__body">
+              <span class="service-card__index">02</span>
+              <h3>Bathroom Remodeling</h3>
+              <p>Spa-caliber retreats with honed marble, radiant floors, and considered, quiet detailing.</p>
+              <span class="service-card__more">Explore →</span>
+            </div>
+          </article>
+
+          <article class="service-card reveal" style="--img:url('../public/home%20page/Whole%20Home%20Renovation.png')">
+            <a class="card-link" href="whole-home-remodeling.html" aria-label="Whole Home Renovations"></a>
+            <div class="service-card__media"></div>
+            <div class="service-card__body">
+              <span class="service-card__index">03</span>
+              <h3>Whole Home Renovations</h3>
+              <p>Comprehensive reimaginings that reconfigure space, light, and flow from the studs out.</p>
+              <span class="service-card__more">Explore →</span>
+            </div>
+          </article>
+
+          <article class="service-card reveal" style="--img:url('../public/home%20page/Home%20Additions.png')">
+            <a class="card-link" href="home-additions.html" aria-label="Home Additions"></a>
+            <div class="service-card__media"></div>
+            <div class="service-card__body">
+              <span class="service-card__index">04</span>
+              <h3>Home Additions</h3>
+              <p>Seamless second stories, primary suites, and expansions indistinguishable from the original build.</p>
+              <span class="service-card__more">Explore →</span>
+            </div>
+          </article>
+
+          <article class="service-card reveal" style="--img:url('../public/home%20page/Basement%20Finishing.png')">
+            <a class="card-link" href="services.html" aria-label="Basement Finishing"></a>
+            <div class="service-card__media"></div>
+            <div class="service-card__body">
+              <span class="service-card__index">05</span>
+              <h3>Basement Finishing</h3>
+              <p>Lower levels reborn as theaters, wine rooms, and wellness suites with daylight where there was none.</p>
+              <span class="service-card__more">Explore →</span>
+            </div>
+          </article>
+
+          <article class="service-card reveal" style="--img:url('../public/home%20page/Outdoor%20Living%20Spaces.png')">
+            <a class="card-link" href="outdoor-living.html" aria-label="Outdoor Living Spaces"></a>
+            <div class="service-card__media"></div>
+            <div class="service-card__body">
+              <span class="service-card__index">06</span>
+              <h3>Outdoor Living Spaces</h3>
+              <p>Covered terraces, summer kitchens, and pool houses that extend the home into the landscape.</p>
+              <span class="service-card__more">Explore →</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== MIDDLE SHOWCASE (scroll-scrubbed video) ===================== -->
+    <section class="showcase" id="showcase">
+      <div class="showcase__viewport">
+        <div class="showcase__scene" id="showcaseScene">
+          <video
+            class="showcase__video"
+            id="middleVideo"
+            muted playsinline preload="auto"
+          >
+            <!-- Dense-keyframe re-encode for smooth scroll seeking. No poster:
+                 a poster would sit on the video until a frame paints and can get
+                 "stuck" showing a stock photo on some hosts. -->
+            <source src="videos/middlesection1-scrub.mp4" type="video/mp4" />
+          </video>
+          <div class="showcase__scrim"></div>
+        </div>
+
+        <div class="showcase__content reveal" id="showcaseContent">
+          <span class="eyebrow eyebrow--light">The Aldermere Standard</span>
+          <h2 class="showcase__title">Where craftsmanship<br />meets the extraordinary.</h2>
+          <p class="showcase__sub">
+            From structural reimagining to the final hand-applied finish, every
+            project is a study in precision, patience, and materials chosen to
+            last generations.
+          </p>
+          <ul class="showcase__stats">
+            <li><span>27</span>Years of mastery</li>
+            <li><span>40+</span>In-house artisans</li>
+            <li><span>100%</span>Fixed-price clarity</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== BEFORE & AFTER ===================== -->
+    <section class="section section--dark beforeafter" id="transformations">
+      <div class="container">
+        <header class="section__head section__head--center">
+          <span class="eyebrow eyebrow--light reveal">Before &amp; After</span>
+          <h2 class="section__title reveal">The Transformation Speaks<br />For Itself</h2>
+          <p class="section__lede section__lede--light reveal">
+            See how outdated spaces become extraordinary homes through thoughtful
+            design and expert craftsmanship.
+          </p>
+        </header>
+      </div>
+
+      <div class="container container--wide">
+        <figure class="ba reveal" data-ba>
+          <div class="ba__img ba__img--after" style="background-image:url('./public/after1.png')"></div>
+          <div class="ba__img ba__img--before" data-ba-before style="background-image:url('./public/before1.png')"></div>
+          <div class="ba__handle" data-ba-handle>
+            <span class="ba__line"></span>
+            <span class="ba__grip"><i></i><i></i></span>
+          </div>
+          <input type="range" min="0" max="100" value="50" class="ba__range" data-ba-range aria-label="Drag to compare before and after" />
+          <span class="ba__tag ba__tag--before">Before</span>
+          <span class="ba__tag ba__tag--after">After</span>
+        </figure>
+        <figcaption class="ba__caption reveal">Drag the handle to reveal the transformation</figcaption>
+      </div>
+    </section>
+
+    <!-- ===================== WHY CHOOSE US ===================== -->
+    <section class="section whychoose">
+      <div class="container">
+        <header class="section__head">
+          <span class="eyebrow reveal">Why Choose Aldermere</span>
+          <h2 class="section__title reveal">An uncompromising standard,<br />from first sketch to final walkthrough.</h2>
+        </header>
+
+        <div class="why__grid">
+          <div class="why__item reveal">
+            <span class="why__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><path d="M12 2 3 7v10l9 5 9-5V7z"/><path d="M12 7v10M7.5 9.5v5M16.5 9.5v5"/></svg>
+            </span>
+            <h3>Craftsmanship</h3>
+            <p>In-house artisans, not rotating subcontractors. Joinery, tile, and finish work held to a millimeter.</p>
+          </div>
+          <div class="why__item reveal">
+            <span class="why__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><circle cx="12" cy="12" r="9"/><path d="M8 12h8M12 8v8"/></svg>
+            </span>
+            <h3>Transparency</h3>
+            <p>Fixed, itemized proposals and a live project ledger. No surprise change orders, ever.</p>
+          </div>
+          <div class="why__item reveal">
+            <span class="why__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="3" y="4" width="18" height="16"/><path d="M3 9h18M8 4v16"/></svg>
+            </span>
+            <h3>Project Management</h3>
+            <p>A single dedicated manager owns your timeline, trades, and communication start to finish.</p>
+          </div>
+          <div class="why__item reveal">
+            <span class="why__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><path d="M12 2 4 5v6c0 5 3.4 9 8 11 4.6-2 8-6 8-11V5z"/><path d="m9 12 2 2 4-4"/></svg>
+            </span>
+            <h3>Warranty</h3>
+            <p>An industry-leading multi-year workmanship warranty backs every structure we touch.</p>
+          </div>
+          <div class="why__item reveal">
+            <span class="why__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><path d="M12 3v18M5 8l7-5 7 5M5 8v8l7 5 7-5V8"/></svg>
+            </span>
+            <h3>Quality Materials</h3>
+            <p>Sourced from the same mills and quarries trusted by the world's leading architects.</p>
+          </div>
+          <div class="why__item reveal">
+            <span class="why__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="10" r="2.2"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6M15.5 20c0-2 1-3.7 2.5-4.6"/></svg>
+            </span>
+            <h3>Expert Team</h3>
+            <p>Architects, designers, and master builders under one roof, accountable to one another and to you.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== PROCESS ===================== -->
+    <section class="section section--warm process" id="process">
+      <div class="container">
+        <header class="section__head section__head--center">
+          <span class="eyebrow reveal">Our Process</span>
+          <h2 class="section__title reveal">Four deliberate stages.<br />Zero guesswork.</h2>
+        </header>
+
+        <ol class="process__timeline">
+          <li class="process__step reveal">
+            <span class="process__num">01</span>
+            <div class="process__body">
+              <h3>Consultation</h3>
+              <p>We listen first. An on-site visit to understand your home, your lifestyle, and your aspirations — at no cost.</p>
+            </div>
+          </li>
+          <li class="process__step reveal">
+            <span class="process__num">02</span>
+            <div class="process__body">
+              <h3>Design</h3>
+              <p>Architectural drawings, material palettes, and photoreal renderings refined until the vision is exact.</p>
+            </div>
+          </li>
+          <li class="process__step reveal">
+            <span class="process__num">03</span>
+            <div class="process__body">
+              <h3>Build</h3>
+              <p>Our craftsmen execute with daily oversight, immaculate jobsites, and a fixed, transparent schedule.</p>
+            </div>
+          </li>
+          <li class="process__step reveal">
+            <span class="process__num">04</span>
+            <div class="process__body">
+              <h3>Reveal</h3>
+              <p>A white-glove final walkthrough, complete documentation, and the keys to a home transformed.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ===================== FEATURED PROJECTS ===================== -->
+    <section class="section projects" id="projects">
+      <!-- Blueprint routing lines — subtle brass paths that connect the cases as you scroll -->
+      <div class="blueprint" aria-hidden="true">
+        <svg class="blueprint__svg" viewBox="0 0 1200 2600" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <path id="bpA" d="M180 -40 C 180 360, 1020 520, 1020 920 S 180 1380, 180 1760 S 1020 2180, 1020 2660" />
+            <path id="bpB" d="M1040 -40 C 1040 300, 240 460, 240 880 S 1000 1320, 1000 1720 S 220 2160, 220 2660" />
+          </defs>
+          <g class="bp-glow">
+            <use href="#bpA" /><use href="#bpB" />
+          </g>
+          <g class="bp-line">
+            <use href="#bpA" /><use href="#bpB" />
+          </g>
+          <g class="bp-nodes">
+            <circle cx="180" cy="60" r="4" /><circle cx="1020" cy="920" r="4" />
+            <circle cx="180" cy="1760" r="4" /><circle cx="1000" cy="1720" r="4" />
+            <circle cx="240" cy="880" r="4" />
+          </g>
+        </svg>
+      </div>
+
+      <div class="container">
+        <header class="section__head">
+          <span class="eyebrow reveal">Featured Projects</span>
+          <h2 class="section__title reveal">Selected works from<br />our recent portfolio.</h2>
+        </header>
+      </div>
+
+      <article class="case reveal">
+        <div class="case__media" style="background-image:url('./public/portfolio/Smithdale%20Spa%20Bath/hero.jpg')"></div>
+        <div class="case__panel">
+          <span class="case__meta">Primary Bath · Piney Point, Houston</span>
+          <h3 class="case__title">The Smithdale Spa Bath</h3>
+          <p>A compartmentalized 1990s primary bath rebuilt as a serene wet-room spa in honed Carrara marble, fluted white oak, and a sculptural freestanding stone tub set to the morning light.</p>
+          <ul class="case__facts">
+            <li><span>Scope</span>540 sq ft</li>
+            <li><span>Duration</span>11 weeks</li>
+            <li><span>Investment</span>$245K</li>
+          </ul>
+          <a href="project-smithdale.html" class="link-underline">View the case study</a>
+        </div>
+      </article>
+
+      <article class="case case--reverse reveal">
+        <div class="case__media" style="background-image:url('./public/portfolio/Del%20Monte%20Kitchen/hero.jpg')"></div>
+        <div class="case__panel">
+          <span class="case__meta">Kitchen · River Oaks, Houston</span>
+          <h3 class="case__title">The Del Monte Kitchen</h3>
+          <p>A closed, builder-grade kitchen opened to the garden and rebuilt in book-matched Calacatta Viola, rift-sawn white oak, and unlacquered brass — with a working scullery hidden behind it.</p>
+          <ul class="case__facts">
+            <li><span>Scope</span>920 sq ft</li>
+            <li><span>Duration</span>18 weeks</li>
+            <li><span>Investment</span>$410K</li>
+          </ul>
+          <a href="project-delmonte.html" class="link-underline">View the case study</a>
+        </div>
+      </article>
+
+      <article class="case reveal">
+        <div class="case__media" style="background-image:url('./public/portfolio/Gaylord%20Pavilion/hero.jpg')"></div>
+        <div class="case__panel">
+          <span class="case__meta">Outdoor Living · Hunters Creek, Houston</span>
+          <h3 class="case__title">The Gaylord Pavilion</h3>
+          <p>A tired backyard transformed into a resort-grade pavilion — an ipe-ceilinged loggia, a full summer kitchen, a limestone fireplace, and an infinity-edge pool that runs to the tree line.</p>
+          <ul class="case__facts">
+            <li><span>Scope</span>2,100 sq ft</li>
+            <li><span>Duration</span>7 months</li>
+            <li><span>Investment</span>$590K</li>
+          </ul>
+          <a href="project-gaylord.html" class="link-underline">View the case study</a>
+        </div>
+      </article>
+    </section>
+
+    <!-- ===================== TESTIMONIALS ===================== -->
+    <section class="section section--dark testimonials" id="testimonials">
+      <div class="container">
+        <header class="section__head section__head--center">
+          <span class="eyebrow eyebrow--light reveal">Client Stories</span>
+          <h2 class="section__title reveal">Trusted with the homes<br />that matter most.</h2>
+        </header>
+
+        <div class="quotes">
+          <figure class="quote reveal">
+            <div class="quote__stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <blockquote>“Aldermere managed a year-long renovation with a calm we never expected. The craftsmanship is genuinely heirloom quality — every detail considered.”</blockquote>
+            <figcaption><strong>Catherine &amp; James Hawthorne</strong><span>Greenwich, CT</span></figcaption>
+          </figure>
+          <figure class="quote reveal">
+            <div class="quote__stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <blockquote>“The most organized, transparent contractor we've ever worked with. We always knew the schedule, the budget, and the next step. The result exceeded the renderings.”</blockquote>
+            <figcaption><strong>Daniel Ashby</strong><span>Westport, CT</span></figcaption>
+          </figure>
+          <figure class="quote reveal">
+            <div class="quote__stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <blockquote>“They treated our 1920s home with the reverence it deserved. Modern comfort, original soul. We could not be happier and recommend them without reservation.”</blockquote>
+            <figcaption><strong>Marisa Linden</strong><span>Darien, CT</span></figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== FINANCING ===================== -->
+    <section class="section financing" id="financing">
+      <div class="container financing__inner">
+        <div class="financing__text reveal">
+          <span class="eyebrow">Flexible Financing</span>
+          <h2 class="section__title">Invest in your home<br />on your terms.</h2>
+          <p class="section__lede">
+            Tailored financing options make even the most ambitious transformation
+            approachable. Competitive rates, transparent terms, and a dedicated
+            advisor to structure a plan around your goals.
+          </p>
+          <ul class="financing__list">
+            <li>Pre-approval in as little as 48 hours</li>
+            <li>Terms from 12 to 144 months</li>
+            <li>No prepayment penalties</li>
+          </ul>
+          <a href="#contact" class="btn btn--dark btn--lg">Explore Financing Options</a>
+        </div>
+        <div class="financing__media reveal" style="background-image:url('/images/us-1600573472550-8090b5e0745e.jpg')"></div>
+      </div>
+    </section>
+
+    <!-- ===================== FINAL CTA ===================== -->
+    <section class="finalcta" id="contact">
+      <div class="finalcta__bg"></div>
+      <div class="container finalcta__inner reveal">
+        <span class="eyebrow eyebrow--light">Begin Your Transformation</span>
+        <h2 class="finalcta__title">Ready To Transform<br />Your Home?</h2>
+        <p class="finalcta__sub">Schedule your complimentary consultation and discover what's possible.</p>
+        <a href="mailto:design@aldermere.com" class="btn btn--solid btn--xl">Get Free Consultation</a>
+        <p class="finalcta__note">Or call us directly at <a href="tel:+18005551234">800.555.1234</a></p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================== FOOTER (injected by site.js) ===================== -->
+  <div id="site-footer"></div>
+
+  <script src="assets/vendor/gsap.min.js"></script>
+  <script src="assets/vendor/ScrollTrigger.min.js"></script>
+  <script src="js/site.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

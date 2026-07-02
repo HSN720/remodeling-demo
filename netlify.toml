@@ -1,0 +1,13 @@
+[build]
+  publish = "."
+
+[[headers]]
+  for = "/*.{jpg,jpeg,png,webp,svg,mp4,woff2,css,js}"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Serve the custom 404 for any unmatched path.
+[[redirects]]
+  from = "/*"
+  to = "/404.html"
+  status = 404

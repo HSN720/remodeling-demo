@@ -1,0 +1,12 @@
+{
+  "name": "Aldermere — Luxury Home Remodeling",
+  "short_name": "Aldermere",
+  "description": "Luxury home remodeling, renovations, and custom home transformations in Houston.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#1A1A1A",
+  "theme_color": "#1A1A1A",
+  "icons": [
+    { "src": "icons/favicon.svg", "type": "image/svg+xml", "sizes": "any", "purpose": "any" }
+  ]
+}
